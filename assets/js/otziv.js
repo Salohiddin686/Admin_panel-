@@ -30,6 +30,8 @@ fetch(APIContact)
                         </div>            
                 `;
             ullu.appendChild(li);
+            nameInput.value = ''
+            messageInput.value = ''
 
             li.querySelector('.dlate').addEventListener("click", () => {
 
@@ -52,27 +54,27 @@ fetch(APIContact)
                 }
                 tresh()
             })
-            li.querySelector('.correct'), addEventListener("click", () => {
-                function correct() {
-  
-                    fetch(`${APIContact}/update/${item._id}`, {
-                        method: "DELETE",
-                        headers: {
-                            'Content-Type': 'application/json',
-                            Authorization: `Bearer ${brToken}`
-                        }
-                    })
-                        .then((res) => res.json())
-                        .then((data) => {                       
-                            alert(`отзыв с именем-фамилией ${item.name} был удалён!!!`)
-                        })
-                        .catch((err) => {
-                            console.log("Error:", err);
+            // li.querySelector('.correct'), addEventListener("click", () => {
+            // function correct() {
 
-                        })
-                }
-                correct()
-            })
+            //     fetch(`${APIContact}/update/${item._id}`, {
+            //         method: "DELETE",
+            //         headers: {
+            //             'Content-Type': 'application/json',
+            //             Authorization: `Bearer ${brToken}`
+            //         }
+            //     })
+            //         .then((res) => res.json())
+            //         .then((data) => {                       
+            //             alert(`отзыв с именем-фамилией ${item.name} был удалён!!!`)
+            //         })
+            //         .catch((err) => {
+            //             console.log("Error:", err);
+
+            //         })
+            // }
+            // correct()
+            // })
         });
     })
     .catch((error) => {

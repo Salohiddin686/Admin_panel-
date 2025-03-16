@@ -17,7 +17,7 @@ function poiskovik(items) {
         li.classList.add("card_cart");
 
         li.innerHTML = `
-           <img class="delate" src="../images/delate.png" alt="">
+           <img class="deleta" src="../images/delate.png" alt="">
            <img src="${item.image}" alt="" class="card_img">
         `;
 

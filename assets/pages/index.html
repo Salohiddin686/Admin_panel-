@@ -114,8 +114,41 @@
                 </div>
             </seaction>
 
-        </main>
-        <!-- main end -->
+            <div class="modal hidden">
+                <div class="modal_wrapper">
+                    <p class="modal_title">Измените <span class="type-type"></span></p>
+                    <form class="modal_info_wrapper">
+                        <img class="modal_img" style="width: 200px; height: 200px;" src="../images/add_photo.webp"
+                            alt="">
+                        <div class="modal_info_wrapper2">
+                            <div class="post_info_title ">Данные учителя</div>
+                            <div class="post_text_wrapper ">
+                                <p class="post_texts ">
+                                    Имя Фамилия
+                                    <input type="text" id="full-name-modal" class="post_input">
+                                </p>
+                                <p class="post_texts">
+                                    Предмет
+                                    <input type="text" id="predmet-modal" class="post_input">
+                                </p>
+                                <p class="post_texts">
+                                    Роль
+                                    <select id="rol-modal" class="post_input">
+                                        <option value="Teacher">Teacher</option>
+                                        <option value="Personal">Personal</option>
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                        <button class="modal_add">add</button>
+                    </form>
+                </div>
+            </div>
+            <div class="overlay hidden"></div>
+    </div>
+
+    </main>
+    <!-- main end -->
 
     </div>
     <script src="../js/test.js"></script>

@@ -62,7 +62,7 @@ main {
 }
 
 .menu_pages:hover {
-    opacity: 0.9;
+    /* opacity: 0.9; */
     box-shadow: 0 2px 8px 2px var(--primery);
 }
 
@@ -243,21 +243,23 @@ main {
 }
 
 .delate {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+.deleta {
     opacity: 0;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    cursor: default;
-    transform: translate(-50%, -50%);
     height: 40px;
     width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s linear;
 }
 
-.card_cart .delate {
-    transition: .4s linear;
-}
-
-.card_cart:hover .delate {
+.card_cart:hover .deleta {
     opacity: 1;
 }
 
@@ -274,6 +276,19 @@ main {
     background: var(--white);
     padding: 0 20px 20px;
     border-radius: 22px;
+}
+
+.card_img_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_title_wrapper {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .card_rol {
@@ -315,6 +330,12 @@ main {
     width: 30px;
 }
 
+.correct2 {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
 .dlate {
     position: absolute;
     top: 49%;
@@ -329,13 +350,56 @@ main {
     cursor: pointer;
     margin-top: 300px;
 }
+
 .exit:hover {
     box-shadow: 0 2px 8px 2px var(--primery);
 }
+
 .exit * {
     cursor: pointer;
 }
+
 .exit img {
     width: 40px;
     margin-right: 10px;
+}
+
+.modal {
+    background: var(--white);
+    border: 1px solid var(--primery);
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(-15%, -50%);
+    z-index: 11;
+}
+
+.modal_info_wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.modal_add {
+    background: var(--primery);
+    color: var(--white);
+    border: none;
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.overlay {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    z-index: 10px;
 }
