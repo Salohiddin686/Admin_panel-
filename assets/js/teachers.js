@@ -57,33 +57,26 @@ fetch(API)
             const form = document.querySelector('.modal_info_wrapper')
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
-                const urlModal = photoPreview.getAttribute("src");
                 const modalTitle = document.querySelector('#full-name-modal').value;
                 const modalPredmet = document.querySelector('#predmet-modal').value;
                 const modalrol = document.querySelector('#rol-modal').value;
 
                 const requestBody = {
                     full_name: modalTitle,
-                    image: urlModal,
                     type: modalrol,
                     subject: modalPredmet,
                 }
-                console.log(item._id);
 
                 fetch(`${baseUrl}/teachers/update${item._id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Bearer ${brToken}`
+                        Authorization: `Bearer ${localStorage.getItem('token')}`
                     },
                     body: JSON.stringify(requestBody),
                 })
                     .then((res) => res.json())
                     .then((data) => {
-                        // photoPreview.setAttribute("src", "../images/add_photo.webp")
-                        console.log(data);
-
-
                     })
                     .catch((err) => {
                         console.log("Error:", err);

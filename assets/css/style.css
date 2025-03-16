@@ -30,6 +30,19 @@ main {
     z-index: 4;
 }
 
+.menu2 {
+    width: 100px;
+    background: var(--darkBlue);
+    color: var(--white);
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 4;
+
+}
+
 .menu_title {
     display: flex;
     align-items: center;
@@ -130,6 +143,10 @@ main {
 }
 
 .hidden {
+    display: none;
+}
+
+.hidden * {
     display: none;
 }
 
@@ -271,8 +288,18 @@ main {
 
 }
 
+.card_info_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .card_text_wrapper {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
+    /* text-align: center; */
     background: var(--white);
     padding: 0 20px 20px;
     border-radius: 22px;
@@ -348,7 +375,9 @@ main {
 
 .exit {
     cursor: pointer;
-    margin-top: 300px;
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
 }
 
 .exit:hover {
