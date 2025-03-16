@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;800&display=swap);
+
+
+/* **** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+/* main  */
+.all_wrapper {
+    display: flex;
+}
+/* container */
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --white: rgb(255, 255, 255);
+    --primery: rgb(43, 167, 226);
+    --dark: rgb(12, 16, 26);
+    --darkGreen: rgb(58, 78, 80);
+    --darkBlue: rgb(16, 21, 36);
+    --grey: rgb(145, 159, 174);
+    --lightGrey: rgb(223, 223, 223);
+
+}
+
+.active {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--primery);
+    transition: 0.3s;
+    cursor: default;
+}
+.active:hover {
+/* opacity: 0.7;     */
+box-shadow: 0 2px 8px 2px var(--lightGrey);
+}
+
+.hidden {
+    display: none;
+}

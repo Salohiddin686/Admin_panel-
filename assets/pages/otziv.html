@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="icon" href="../images/admin.png">
+</head>
+
+<body>
+
+    <div class="all_wrapper">
+        <!-- menu start -->
+        <section class="menu">
+            <div class="menu_wrapper">
+                <h1 class="menu_title">
+                    <img src="../images/logo.svg" alt="">
+                    Школа №39
+                </h1>
+
+                <nav>
+
+                    <ul class="menu_list">
+                        <a class="menu_pages" href="../pages/index.html">
+                            <img class="menu_img" src="../images/teacher.png" alt="">
+                            <p class="menu_pages_name">Учителя</p>
+                        </a>
+                        <a class="menu_pages" href="../pages/blog.html">
+                            <img class="menu_img" src="../images/calendar.png" alt="">
+                            <p class="menu_pages_name">Событя</p>
+                        </a>
+                        <a class="menu_pages" href="../pages/galary.html">
+                            <img class="menu_img" src="../images/cartina.svg" alt="">
+                            <p class="menu_pages_name">Галарея</p>
+                        </a>
+                        <a class="active" href="#">
+                            <img class="menu_img" src="../images/otziv.png" alt="">
+                            <p class="menu_pages_name">Отзыв</p>
+                        </a>
+
+                    </ul>
+                </nav>
+
+                <a class="menu_pages exit" href="../../login.html">
+                    <img class="menu_img" src="../images/exit.png" alt="">
+                    <p class="menu_pages_name">Выход из админки</p>
+                </a>
+
+            </div>
+        </section>
+        <!-- menu end -->
+
+        <!-- main start -->
+        <main>
+
+
+            <!-- header start -->
+            <section class="header">
+                <div class="container">
+                    <div class="header_wrapper">
+                        <h2 class="header_menu">
+                            <img class="header_menu_img" src="../images/menu_line.png" alt="">
+                            Админ панел
+                        </h2>
+                    </div>
+                </div>
+            </section>
+            <!-- header end -->
+            <div class="post">
+                <div class="container">
+                    <form class="post_wrapper">
+                        <div class="post_box">
+
+                            <div class="post_info_wrapper">
+                                <div class="post_info_title">Данные учителя</div>
+                                <div class="post_text_wrapper" style="display: flex; gap: 30px;">
+                                    <p class="post_texts">
+                                        Имя Фамилия
+                                        <input type="text" id="full-name" class="post_input">
+                                    </p>
+                                    <p class="post_texts">
+                                        сообщение
+                                        <input type="text" id="predmet" class="post_input">
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="post_add">add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <seaction class="card">
+                <div class="container">
+                    <ul class="card_wrapper2">
+
+                    </ul>
+                </div>
+            </seaction>
+
+        </main>
+        <!-- main end -->
+
+    </div>
+    <script src="../js/test.js"></script>
+    <script src="../js/otziv.js"></script>
+</body>
+
+</html>
