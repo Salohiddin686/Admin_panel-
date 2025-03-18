@@ -54,27 +54,7 @@ fetch(APIContact)
                 }
                 tresh()
             })
-            // li.querySelector('.correct'), addEventListener("click", () => {
-            // function correct() {
 
-            //     fetch(`${APIContact}/update/${item._id}`, {
-            //         method: "DELETE",
-            //         headers: {
-            //             'Content-Type': 'application/json',
-            //             Authorization: `Bearer ${brToken}`
-            //         }
-            //     })
-            //         .then((res) => res.json())
-            //         .then((data) => {                       
-            //             alert(`отзыв с именем-фамилией ${item.name} был удалён!!!`)
-            //         })
-            //         .catch((err) => {
-            //             console.log("Error:", err);
-
-            //         })
-            // }
-            // correct()
-            // })
         });
     })
     .catch((error) => {
@@ -106,6 +86,7 @@ ul.addEventListener('submit', (e) => {
                     <h3 class="contact_mrssage_title">${item.name}</h3>
                     <p class="contact_mrssage_subtitle">${item.message}</p>
                     <img class="dlate" src="../images/delate.png" alt="">
+                                <img class="correct" data-id="${item._id}" src="../images/correct.png" alt="">
                 </div>
             </div>
 `;
@@ -113,6 +94,57 @@ ul.addEventListener('submit', (e) => {
                     ullu.appendChild(li);
                     nameInput.value = ''
                     messageInput.value = ''
+
+                    const form = document.querySelector('.modal_info_wrapper')
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const modalTitle = document.querySelector('#full-name-modal').value;
+                        const modalPredmet = document.querySelector('#predmet-modal').value;
+                        const modalrol = document.querySelector('#rol-modal').value;
+
+                        const requestBody = {
+                            full_name: modalTitle,
+                            type: modalrol,
+                            subject: modalPredmet,
+                        }
+
+                        fetch(`${APIContact}/update${item._id}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                Authorization: `Bearer ${localStorage.getItem('token')}`
+                            },
+                            body: JSON.stringify(requestBody),
+                        })
+                            .then((res) => res.json())
+                            .then((data) => {
+                            })
+                            .catch((err) => {
+                                console.log("Error:", err);
+
+                            })
+                    })
+
+
+                    li.querySelector('.correct').addEventListener("click", () => {
+
+                        modal.classList.remove("hidden")
+                        overlay.classList.remove("hidden")
+
+                    })
+                    overlay.addEventListener('click', () => {
+                        modal.classList.add("hidden")
+                        overlay.classList.add("hidden")
+                    })
+                    document.addEventListener('keyup', (e) => {
+                        if (e.key == "Escape") {
+                            modal.classList.add("hidden")
+                            overlay.classList.add("hidden")
+                        }
+
+                    })
+
+                        .catch((err) => console.log("Error:", err));
                 })
 
 

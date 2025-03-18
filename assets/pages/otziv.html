@@ -107,7 +107,6 @@
                         <div class="post_box">
 
                             <div class="post_info_wrapper">
-                                <div class="post_info_title">Данные учителя</div>
                                 <div class="post_text_wrapper" style="display: flex; gap: 30px;">
                                     <p class="post_texts">
                                         Имя Фамилия
@@ -119,7 +118,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <button class="post_add">add</button>
+                            <button class="modal_add">add</button>
                         </div>
                     </form>
                 </div>
@@ -132,6 +131,31 @@
                     </ul>
                 </div>
             </seaction>
+
+            <div class="modal hidden">
+                <div class="modal_wrapper">
+                    <p class="modal_title">Измените <span class="type-type"></span></p>
+                    <form class="modal_info_wrapper">
+                        <img class="modal_img" style="width: 200px; height: 200px;" src="../images/add_photo.webp"
+                            alt="">
+                        <div class="modal_info_wrapper2">
+                            <div class="post_text_wrapper ">
+                                <p class="post_texts ">
+                                    Имя Фамилия
+                                    <input type="text" id="full-name-modal" class="post_input">
+                                </p>
+                                <p class="post_texts">
+                                    сообщение
+                                    <input type="text" id="predmet-modal" class="post_input">
+                                </p>
+    
+                            </div>
+                        </div>
+                        <button class="modal_add">add</button>
+                    </form>
+                </div>
+            </div>
+            <div class="overlay hidden"></div>
 
         </main>
         <!-- main end -->
